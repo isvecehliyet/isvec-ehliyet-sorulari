@@ -3,44 +3,348 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ehliyetsinavi.se – Kaynaklar</title>
-  <meta name="description" content="İsveç ehliyet teori sınavı için hızlı kaynaklar: PDF checklist, deneme sınavları ve rehberler." />
+  <title>İsveç Ehliyet Soruları – Kaynaklar | ehliyetsinavi.se</title>
+  <meta name="description" content="İsveç ehliyet teori sınavına hazırlanmak için hızlı kaynaklar: ücretsiz deneme, teori soruları, dersler, trafik işaretleri kitabı, rehberler ve uygulama." />
+  <meta name="robots" content="index,follow" />
   <style>
-    body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:#0b1220;color:#e8eefc}
-    .wrap{max-width:920px;margin:0 auto;padding:56px 16px}
-    .card{background:#111a2e;border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px;margin:14px 0}
-    a{color:#7dd3fc;text-decoration:none}
+    :root{
+      --bg:#0b1220;
+      --panel:#0f1730;
+      --card:#111a2e;
+      --border:rgba(255,255,255,.10);
+      --text:#e8eefc;
+      --muted:rgba(232,238,252,.78);
+      --accent:#2563eb;
+      --good:#22c55e;
+      --warn:#f59e0b;
+      --link:#7dd3fc;
+      --shadow:0 12px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 20% 0%, rgba(37,99,235,.28), transparent 60%),
+        radial-gradient(900px 520px at 80% 0%, rgba(34,197,94,.18), transparent 60%),
+        var(--bg);
+    }
+    a{color:var(--link);text-decoration:none}
     a:hover{text-decoration:underline}
-    .btn{display:inline-block;background:#2563eb;color:white;padding:12px 16px;border-radius:12px;font-weight:700}
-    .muted{opacity:.85}
-    h1{margin:0 0 10px;font-size:34px}
-    h2{margin:0 0 8px}
-    p{margin:10px 0}
+    .wrap{max-width:1080px;margin:0 auto;padding:56px 16px 72px}
+    .top{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      margin-bottom:14px;
+    }
+    .brand{display:flex;align-items:center;gap:10px}
+    .dot{width:12px;height:12px;border-radius:999px;background:var(--accent)}
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:var(--muted);font-size:13px;
+      white-space:nowrap;
+    }
+
+    .hero{
+      border:1px solid var(--border);
+      background:linear-gradient(135deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      border-radius:20px;
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+    .hero h1{margin:0 0 10px;font-size:34px;line-height:1.08}
+    .hero p{margin:0 0 16px;color:var(--muted);max-width:84ch;font-size:16px}
+    .ctaRow{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:12px 14px;border-radius:12px;
+      font-weight:800;border:1px solid transparent;
+      transition:transform .08s ease, filter .15s ease;
+      will-change:transform;
+    }
+    .btn:hover{transform:translateY(-1px);filter:brightness(1.05);text-decoration:none}
+    .btn.primary{background:var(--accent);color:#fff}
+    .btn.good{background:var(--good);color:#06210f}
+    .btn.ghost{background:rgba(255,255,255,.04);border-color:var(--border);color:var(--text)}
+    .btn.warn{background:rgba(245,158,11,.14);border-color:rgba(245,158,11,.35);color:#ffd7a6}
+
+    .grid{
+      margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(12,1fr);
+      gap:12px;
+    }
+    .card{
+      grid-column:span 12;
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+    }
+    .card h2{margin:0 0 10px;font-size:18px}
+    .card p{margin:0 0 12px;color:var(--muted)}
+    .links{display:grid;gap:10px}
+    .linkItem{
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      padding:12px 12px;border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(17,26,46,.45);
+      text-decoration:none;color:var(--text);
+    }
+    .linkItem:hover{filter:brightness(1.06);text-decoration:none}
+    .linkItem small{color:var(--muted)}
+    .tag{
+      font-size:12px;
+      padding:6px 10px;border-radius:999px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:rgba(255,255,255,.85);
+      white-space:nowrap;
+    }
+    .cols{display:grid;grid-template-columns:repeat(12,1fr);gap:12px;margin-top:12px}
+    .col6{grid-column:span 12}
+    @media (min-width:860px){
+      .col6{grid-column:span 6}
+    }
+    .footer{
+      margin-top:16px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      border-radius:18px;
+      padding:16px;
+      color:var(--muted);
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <h1>İsveç Ehliyet Teori – Hızlı Kaynaklar 🇸🇪🚗</h1>
-    <p class="muted">PDF checklist, deneme sınavları ve pratik linkler.</p>
-
-    <div class="card">
-      <h2>✅ Deneme sınavları & açıklamalar</h2>
-      <p><a class="btn" href="https://ehliyetsinavi.se" target="_blank" rel="noopener">ehliyetsinavi.se'ye git</a></p>
+    <div class="top">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <strong>İsveç Ehliyet Soruları</strong>
+      </div>
+      <div class="pill">Kaynak merkezi • ehliyetsinavi.se</div>
     </div>
 
-    <div class="card">
-      <h2>📄 Ücretsiz PDF checklist</h2>
+    <section class="hero" aria-label="Hero">
+      <h1>İsveç Ehliyet Teori Sınavı için Hızlı Kaynaklar 🇸🇪🚗</h1>
       <p>
-        <a href="https://drive.google.com/file/d/1NkHt9MQTerABX2tx1rmDylyvCwEKEVL6/view?usp=sharing" target="_blank" rel="noopener">
-          PDF’yi aç
-        </a>
+        Ücretsiz deneme, teori soruları, dersler, trafik işaretleri, rehberler ve uygulama bağlantıları.
+        Bu sayfayı paylaşarak tek link üzerinden tüm kaynaklara yönlendirebilirsin.
       </p>
+
+      <div class="ctaRow">
+        <a class="btn primary" href="https://www.ehliyetsinavi.se/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">Siteye Git</a>
+        <a class="btn good" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-ucretsiz-teori-sinavi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">Ücretsiz Deneme</a>
+        <a class="btn ghost" href="https://www.ehliyetsinavi.se/isvec-ehliyet-teori-sinavi-sorulari/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">Teori Soruları</a>
+        <a class="btn warn" href="https://www.ehliyetsinavi.se/uyelik-paketleri/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">Üyelik Paketleri</a>
+      </div>
+    </section>
+
+    <div class="grid">
+      <!-- Başla -->
+      <section class="card col6" aria-label="Başlangıç">
+        <h2>Başlangıç Rehberi</h2>
+        <p>Yeni başlayanlar için süreç ve temel sayfalar.</p>
+        <div class="links">
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/10-adimda-isvecte-ehliyet-almak/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>10 Adımda İsveç’te Ehliyet Almak</strong></div>
+              <small>Adım adım süreç • hızlı başlangıç</small>
+            </div>
+            <span class="tag">Rehber</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-b-ehliyeti-rehberi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>İsveç B Ehliyeti Rehberi</strong></div>
+              <small>B sınıfı odaklı genel özet</small>
+            </div>
+            <span class="tag">Rehber</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyet/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>İsveç Ehliyet</strong></div>
+              <small>Ana kategori / giriş</small>
+            </div>
+            <span class="tag">Kategori</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Çalış -->
+      <section class="card col6" aria-label="Çalışma Alanları">
+        <h2>Çalışma Alanları</h2>
+        <p>Dersler ve kitabı kullanarak konu konu ilerle.</p>
+        <div class="links">
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-icin-turkce-dersler/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Türkçe Dersler (Tümü)</strong></div>
+              <small>Konu konu ders içerikleri</small>
+            </div>
+            <span class="tag">Dersler</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-turkce-teori-kitabi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Türkçe Teori Kitabı</strong></div>
+              <small>Düzenli çalışma için tam kaynak</small>
+            </div>
+            <span class="tag">Kitap</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-trafik-isaretleri-kitabi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>İsveç Trafik İşaretleri Kitabı</strong></div>
+              <small>İşaretler & açıklamalar</small>
+            </div>
+            <span class="tag">İşaretler</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Sınavlar -->
+      <section class="card col6" aria-label="Sınavlar">
+        <h2>Sınavlar ve Sorular</h2>
+        <p>Deneme sınavları ve soru bankası.</p>
+        <div class="links">
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyet-teori-sinavi-sorulari/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Teori Sınavı Soruları</strong></div>
+              <small>Soru bankası / pratik</small>
+            </div>
+            <span class="tag">Sorular</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-turkce-teori-sinavlari/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Türkçe Teori Deneme Sınavları</strong></div>
+              <small>Deneme setleri</small>
+            </div>
+            <span class="tag">Deneme</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-ucretsiz-teori-sinavi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Ücretsiz Teori Sınavı</strong></div>
+              <small>Hızlı deneme</small>
+            </div>
+            <span class="tag">Ücretsiz</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Pratik / Sürüş -->
+      <section class="card col6" aria-label="Sürüş ve Pratik">
+        <h2>Sürüş Sınavı ve Görsel Dersler</h2>
+        <p>Uppkörning (sürüş sınavı) için görsel anlatımlar.</p>
+        <div class="links">
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-surus-sinavi-gorsel-dersler/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Sürüş Sınavı Görsel Dersler</strong></div>
+              <small>Pratik odaklı içerikler</small>
+            </div>
+            <span class="tag">Sürüş</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyeti-icin-turkce-dersler/isvec-park-tabelalari-park-levhalari-nasil-okunur/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Park Levhaları Nasıl Okunur?</strong></div>
+              <small>En çok karıştırılan konu</small>
+            </div>
+            <span class="tag">Popüler</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyet-sinavi-trafik-kurallari/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Trafik Kuralları</strong></div>
+              <small>Temel kurallar özeti</small>
+            </div>
+            <span class="tag">Kurallar</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Uygulama / Sözlük -->
+      <section class="card col6" aria-label="Araçlar">
+        <h2>Uygulama ve Araçlar</h2>
+        <p>Mobil kullanım ve terim sözlüğü.</p>
+        <div class="links">
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyet-uygulamasi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>İsveç Ehliyet Uygulaması</strong></div>
+              <small>PWA / uygulama sayfası</small>
+            </div>
+            <span class="tag">App</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/isvec-ehliyet-terimleri-turkce-isvecce-sozluk/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Türkçe–İsveççe Ehliyet Terimleri</strong></div>
+              <small>Sözlük / kavramlar</small>
+            </div>
+            <span class="tag">Sözlük</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/sik-sorulan-sorular/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Sık Sorulan Sorular</strong></div>
+              <small>Hızlı cevaplar</small>
+            </div>
+            <span class="tag">SSS</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Üyelik -->
+      <section class="card col6" aria-label="Üyelik">
+        <h2>Üyelik ve Hesap</h2>
+        <p>Üyelik paketleri, giriş ve hesap yönetimi.</p>
+        <div class="links">
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/uyelik-paketleri/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Üyelik Paketleri</strong></div>
+              <small>Paketleri incele</small>
+            </div>
+            <span class="tag">Üyelik</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/uyegirisi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Üye Girişi</strong></div>
+              <small>Hızlı giriş</small>
+            </div>
+            <span class="tag">Login</span>
+          </a>
+
+          <a class="linkItem" href="https://www.ehliyetsinavi.se/uyelik-hesabi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">
+            <div>
+              <div><strong>Üyelik Hesabı</strong></div>
+              <small>Hesap & içerikler</small>
+            </div>
+            <span class="tag">Hesap</span>
+          </a>
+        </div>
+      </section>
     </div>
 
-    <div class="card">
-      <h2>📌 Not</h2>
-      <p class="muted">Bu sayfa, kaynakları tek yerde toplamak için hazırlanmıştır.</p>
+    <div class="footer" role="contentinfo">
+      <div>© <span id="y"></span> • Kaynak sayfası • ehliyetsinavi.se</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="pill" href="https://www.ehliyetsinavi.se/iletisim/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">İletişim</a>
+        <a class="pill" href="https://www.ehliyetsinavi.se/gizlilik-politikasi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">Gizlilik</a>
+        <a class="pill" href="https://www.ehliyetsinavi.se/cerezler-politikasi/?utm_source=github_pages&utm_medium=referral&utm_campaign=resources" target="_blank" rel="noopener">Çerezler</a>
+      </div>
     </div>
   </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
